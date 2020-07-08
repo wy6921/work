@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./vue.js"></script>
+
+    <title>Document</title>
+    <style>
+        
+        #app {
+            margin-top: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>checkbox复选框属性</h2>
+        <div v-for="item of itemlist" :key="item.id">
+            <input type="checkbox" v-model="msg" :value="item.name">{{item.name}}
+        </div>
+        <span v-if="msg.length">您选择的水果是：{{msg}}</span>
+    </div>
+    
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {            
+                msg: [],
+                itemlist: [
+                    {id:1,name:'香蕉'},
+                    {id:2,name:'苹果'},
+                    {id:3,name:'西瓜'},     
+                    {id:4,name:'樱桃'},                   
+                ],                             
+            },
+                        
+        })
+    </script>
+</body>
+</html>
+
+

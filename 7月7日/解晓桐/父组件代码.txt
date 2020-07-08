@@ -1,0 +1,29 @@
+<template>
+    <div style="color:green">
+    <child @func="msgGet"></child><h2>ƒ˙—°‘Ò¡À{{msg}}</h2>
+    </div>
+</template>
+
+<script>
+
+import child from './Child'
+
+export default {
+    name:'Father',
+    components:{
+        'child':child
+    },
+    data(){
+        return {
+            msg:[]
+        }
+    },
+    methods:{
+        msgGet(e){
+            this.msg = e
+        }
+    }
+}
+</script>
+
+

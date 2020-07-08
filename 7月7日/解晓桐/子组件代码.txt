@@ -1,0 +1,28 @@
+<template>
+  <div style="color:red">
+    <input type="checkbox" value="JavaScript" v-model="msg">JavaScript
+    <input type="checkbox" value="Java" v-model="msg">Java
+    <input type="checkbox" value="Python" v-model="msg">Python
+    <!-- <p>{{msg}}</p> -->
+  </div>
+</template>
+ 
+<script>
+export default {
+  name: 'child',
+  data(){
+      return{
+          msg:[]
+      }
+  },
+  watch:{
+    msg:{
+        handler(newVal){
+            this.$emit('func',newVal);
+        },
+    deep:true
+    }   
+  }
+
+}
+</script>
