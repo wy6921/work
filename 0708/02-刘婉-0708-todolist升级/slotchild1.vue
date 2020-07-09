@@ -1,0 +1,14 @@
+<template>
+    <div>
+        <slot name="first"></slot>  
+        <slot name="second"></slot> 
+        <slot name="third"></slot> 
+    </div>
+  
+</template>
+
+<script>
+export default {
+    
+}
+</script>
